@@ -10,10 +10,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@ComponentScan(basePackages = "academy.learnprogramming")
+@ComponentScan(basePackages = "ro.catalin")
 @PropertySource("classpath:config/game.properties")
 public class GameConfig {
-    // == fields ==
+
     @Value("${game.maxNumber:20}")
     private int maxNumber;
     @Value("${game.guessCount:5}")
@@ -21,7 +21,6 @@ public class GameConfig {
     @Value("${game.minNumber:1}")
     private int minNumber;
 
-    // == bean methods ==
     @Bean
     @MaxNumber
     public int maxNumber(){

@@ -1,0 +1,13 @@
+<thlogic>
+    <attr sel="#headId" th:replace="~{fragments/head :: headFragment}"/>
+    <attr sel="#game-title" th:text="#{game.title}"/>
+    <attr sel="#please-register" th:text="#{game.please.register}"/>
+    <attr sel="#nameLabel" th:text="#{game.name.label}"/>
+    <attr sel="#emailLabel" th:text="#{game.email.label}"/>
+    <attr sel="#setPassword" th:text="#{game.set.password}"/>
+    <attr sel="#confirmPassword" th:text="#{game.confirm.password}"/>
+    <attr sel="#submit" th:text="#{game.submit}"/>
+    <attr sel="#error-password" th:text="#{game.error.password}"/>
+    <attr sel="#error-email" th:text="#{game.error.email}"/>
+    <attr sel="#footerId" th:replace="~{fragments/footer :: footer}"/>
+</thlogic>

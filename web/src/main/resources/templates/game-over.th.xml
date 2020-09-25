@@ -4,8 +4,8 @@
     <attr sel="#game-over" th:text="#{game.over}"/>
     <attr sel="#resultMessage" th:text="${__${T(ro.catalin.util.AttributeNames).RESULT_MESSAGE}__}"/>
     <attr sel="#restart" th:href="@{__${T(ro.catalin.util.GameMappings).RESTART}__}"
-                         th:text="#{game.play}"/>
-    <attr sel="#home" th:href="@{__${T(ro.catalin.util.GameMappings).HOME}__}"
-                        th:text="#{game.home}"/>
+                         th:text="#{game.restart}"/>
+    <attr sel="#dashboard" th:href="@{__${T(ro.catalin.util.AccountMappings).DASHBOARD}__}"
+                        th:text="#{game.dashboard}"/>
     <attr sel="#footerId" th:replace="~{fragments/footer :: footer}"/>
 </thlogic>

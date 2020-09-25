@@ -5,18 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-    <div align="center">
+
+<div class="card bg-light text-center mx-auto" style="width: 50%">
+    <div class="card-header">
         <h1 id="welcome">Welcome to Guess the Number Game</h1>
-        <h3>
-            <a id="play-game" href="play.html">Click to play</a>
-        </h3>
-        <h3>
-            <a id="login" href="login.html">Login</a>
-        </h3>
-        <h3>
-            <a id="register" href="register.html">Register</a>
-        </h3>
+    </div>
+    <div class="card-body">
+        <a id="login" href="login.html" class="btn btn-primary">Login</a>
+        <br>
+        <p></p>
+        <a id="register" href="register.html" class="btn btn-primary">Register</a>
+        <br>
+        <p></p>
+        <label id="choose-language" for="lang">Choose a language:</label>
+        <br>
+        <select class="custom-select mx-auto" style="width: 10rem" name="lang" id="lang"
+                onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);"
+                placeholder="Choose a Language...">
+            <option value="" disabled="disabled" selected></option>
+            <option value="http://localhost:8080/?lang=en">English</option>
+            <option value="http://localhost:8080/?lang=ro">Română</option>
+        </select>
+    </div>
+    <div class="card-footer text-muted">
         <div id="footerId">Informatii footer</div>
     </div>
+</div>
 </body>
 </html>

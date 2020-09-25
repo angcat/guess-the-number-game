@@ -1,15 +1,13 @@
 package ro.catalin.console;
 
-import ro.catalin.Game;
-import ro.catalin.MessageGenerator;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import ro.catalin.Game;
+import ro.catalin.MessageGenerator;
 
 import java.util.Scanner;
 
-@Slf4j
 @Component
 public class ConsoleNumberGuess {
 
@@ -27,8 +25,6 @@ public class ConsoleNumberGuess {
     // == events ==
     @EventListener(ContextRefreshedEvent.class)
     public void start() {
-        log.info("start() -> Container ready for use.");
-
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println(messageGenerator.getMainMessage());

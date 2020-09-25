@@ -1,0 +1,11 @@
+<thlogic>
+    <attr sel="#headId" th:replace="~{fragments/head :: headFragment}"/>
+    <attr sel="#game-title" th:text="#{game.title}"/>
+    <attr sel="#please-login" th:text="#{game.please.login}"/>
+    <attr sel="#emailLabel" th:text="#{game.email.label}"/>
+    <attr sel="#password" th:text="#{game.password}"/>
+    <attr sel="#submit" th:text="#{game.submit}"/>
+    <attr sel="#register" th:href="@{__${T(ro.catalin.util.AccountMappings).REGISTER}__}"
+                            th:text="#{game.register}"/>
+    <attr sel="#footerId" th:replace="~{fragments/footer :: footer}"/>
+</thlogic>

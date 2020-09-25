@@ -1,11 +1,12 @@
 <thlogic>
     <attr sel="#headId" th:replace="~{fragments/head :: headFragment}"/>
     <attr sel="#welcome" th:text="#{game.welcome}"/>
+    <attr sel="#choose-language" th:text="#{game.choose.language}"/>
     <attr sel="#footerId" th:replace="~{fragments/footer :: footer}"/>
     <attr sel="#play-game" th:href="@{__${T(ro.catalin.util.GameMappings).PLAY}__}"
                             th:text="#{game.play}"/>
-    <attr sel="#login" th:href="@{__${T(ro.catalin.util.GameMappings).LOGIN}__}"
+    <attr sel="#login" th:href="@{__${T(ro.catalin.util.AccountMappings).LOGIN}__}"
           th:text="#{game.login}"/>
-    <attr sel="#register" th:href="@{__${T(ro.catalin.util.GameMappings).REGISTER}__}"
+    <attr sel="#register" th:href="@{__${T(ro.catalin.util.AccountMappings).REGISTER}__}"
           th:text="#{game.register}"/>
 </thlogic>

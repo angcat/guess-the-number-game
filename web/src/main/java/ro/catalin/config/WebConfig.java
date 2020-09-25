@@ -14,7 +14,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    // == bean methods ==
     @Bean
     public LocaleResolver localeResolver(){
         return new SessionLocaleResolver();

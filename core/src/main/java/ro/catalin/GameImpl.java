@@ -3,19 +3,15 @@ package ro.catalin;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
-@Slf4j
 @Getter
 @Component
 public class GameImpl implements Game{
 
-    // == fields ==
     @Getter(AccessLevel.NONE)
     private final NumberGenerator numberGenerator;
 
@@ -29,13 +25,12 @@ public class GameImpl implements Game{
     @Setter
     private int guess;
 
-    // == constructor ==
     @Autowired
     public GameImpl(NumberGenerator numberGenerator,@GuessCount int guessCount) {
         this.numberGenerator = numberGenerator;
         this.guessCount = guessCount;
     }
-    // == init ==
+
     @Override
     @PostConstruct
     public void reset() {
@@ -44,15 +39,7 @@ public class GameImpl implements Game{
         remainingGuesses = guessCount;
         biggest = numberGenerator.getMaxNumber();
         number = numberGenerator.next();
-        log.debug("Numarul este {}", number);
     }
-
-    @PreDestroy
-    public void preDestroy(){
-        log.info("in Game preDestroy()");
-    }
-
-    // == public methods ==
 
     @Override
     public void check() {
@@ -77,8 +64,6 @@ public class GameImpl implements Game{
     public boolean isGameLost() {
         return !isGameWon() && remainingGuesses <=0;
     }
-
-    // == private methods ==
 
     private void checkValidNumberRange() {
         validNumberRange = (guess>=smallest && guess<=biggest);
